@@ -10,7 +10,7 @@ public class Student {
     private Course[] courses;
     private Module[] modules;
 
-    public Student(String name, int age, DateTime dateOfBirth, String id, Module[] modules, Course[] courses){
+    public Student(String name, int age, DateTime dateOfBirth, String id, Module[] modules, Course[] courses) {
         this.name = name;
         this.age = age;
         this.dob = dateOfBirth;
@@ -19,7 +19,15 @@ public class Student {
         this.courses = courses;
     }
 
-    public String getUsername(){
+    // need second constructor with no modules and courses given
+    public Student(String name, int age, DateTime dateOfBirth, String id) {
+        this.name = name;
+        this.age = age;
+        this.dob = dateOfBirth;
+        this.id = id;
+    }
+
+    public String getUsername() {
         username = this.name + this.age;
         return username;
     }
@@ -56,19 +64,19 @@ public class Student {
         this.id = id;
     }
 
-    public Module[] getModules(){
+    public Module[] getModules() {
         return modules;
     }
 
-    public void setModules(Module[] modules){
+    public void setModules(Module[] modules) {
         this.modules = modules;
     }
 
-    public Course[] getCourses(){
+    public Course[] getCourses() {
         return courses;
     }
 
-    public void setCourses(Course[] courses){
+    public void setCourses(Course[] courses) {
         this.courses = courses;
     }
 }

@@ -16,9 +16,8 @@ public class Course {
     }
 
     //constructor without students given
-    public Course(String name, Module[] modules, DateTime startDate, DateTime endDate) {
+    public Course(String name, DateTime startDate, DateTime endDate) {
         this.name = name;
-        this.modules = modules;
         this.startDate = startDate;
         this.endDate = endDate;
     }

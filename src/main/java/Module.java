@@ -4,7 +4,7 @@ public class Module {
     private Student[] students;
     private Course[] courses;
 
-    public Module(String name, String id, Student[] students, Course[] courses){
+    public Module(String name, String id, Student[] students, Course[] courses) {
         this.name = name;
         this.id = id;
         this.students = students;
@@ -12,7 +12,7 @@ public class Module {
     }
 
     //create constructor without students
-    public Module(String name, String id){
+    public Module(String name, String id) {
         this.name = name;
         this.id = id;
     }
@@ -41,11 +41,11 @@ public class Module {
         this.students = students;
     }
 
-    public Course[] getCourses(){
+    public Course[] getCourses() {
         return courses;
     }
 
-    public void setCourses(Course[] courses){
+    public void setCourses(Course[] courses) {
         this.courses = courses;
     }
 }

@@ -1,9 +1,5 @@
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.joda.time.DateTime;
-
 import org.junit.Test;
-
-import java.util.Date;
 
 import static org.junit.Assert.*;
 
@@ -28,7 +24,7 @@ public class TestStudent {
     }
 
     @Test(expected = NullPointerException.class)
-    public void testGetUsernameIfNoAgeGiven(){
+    public void testGetUsernameIfNoAgeGiven() {
         Integer age = null;
         Student student = new Student("Una Healey", age, new DateTime(), "1235");
     }
@@ -73,7 +69,8 @@ public class TestStudent {
         DateTime dateOfBirth = new DateTime();
         Student student = new Student("Una Healey", 23, dateOfBirth, "1235");
 
-        DateTime newDOB = new DateTime().withTime(5, 20, 0, 0);;
+        DateTime newDOB = new DateTime().withTime(5, 20, 0, 0);
+        ;
         student.setDob(newDOB);
         assertNotEquals(dateOfBirth, student.getDob());
         assertEquals(newDOB, student.getDob());
@@ -95,13 +92,13 @@ public class TestStudent {
 
     @Test
     public void testGetModules() {
-        Module module1= new Module("software engineering 3",  "CT417");
-        Module module2= new Module("machine learning",  "CT4101");
-        Module[] modules = {module1,module2};
+        Module module1 = new Module("software engineering 3", "CT417");
+        Module module2 = new Module("machine learning", "CT4101");
+        Module[] modules = {module1, module2};
 
         DateTime startDate = new DateTime();
         DateTime endDate = new DateTime();
-        Course course = new Course("ECE", modules, startDate, endDate);
+        Course course = new Course("ECE", startDate, endDate);
         Course[] courses = {course};
 
         Student student = new Student("Una Healey", 23, new DateTime(), "1235", modules, courses);
@@ -113,18 +110,18 @@ public class TestStudent {
 
     @Test
     public void testSetModules() {
-        Module module1 = new Module("software engineering 3",  "CT417");
-        Module module2 = new Module("machine learning",  "CT4101");
-        Module[] modules = {module1,module2};
+        Module module1 = new Module("software engineering 3", "CT417");
+        Module module2 = new Module("machine learning", "CT4101");
+        Module[] modules = {module1, module2};
 
         DateTime startDate = new DateTime();
         DateTime endDate = new DateTime();
-        Course course = new Course("ECE", modules, startDate, endDate);
+        Course course = new Course("ECE", startDate, endDate);
         Course[] courses = {course};
 
         Student student = new Student("Una Healey", 23, new DateTime(), "1235", modules, courses);
 
-        Module module3 = new Module("digital signal processing",  "EE445");
+        Module module3 = new Module("digital signal processing", "EE445");
         Module[] newModules = {module2, module3, module1};
         student.setModules(newModules);
         //check the length was updated
@@ -141,13 +138,13 @@ public class TestStudent {
 
     @Test
     public void testGetCourses() {
-        Module module1= new Module("software engineering 3",  "CT417");
-        Module module2= new Module("machine learning",  "CT4101");
+        Module module1 = new Module("software engineering 3", "CT417");
+        Module module2 = new Module("machine learning", "CT4101");
         Module[] modules = {module1, module2};
 
         DateTime startDate = new DateTime();
         DateTime endDate = new DateTime();
-        Course course = new Course("ECE", modules, startDate, endDate);
+        Course course = new Course("ECE", startDate, endDate);
         Course[] courses = {course};
 
         Student student = new Student("Una Healey", 23, new DateTime(), "1235", modules, courses);
@@ -159,18 +156,18 @@ public class TestStudent {
 
     @Test
     public void testSetCourses() {
-        Module module1= new Module("software engineering 3",  "CT417");
-        Module module2= new Module("machine learning",  "CT4101");
+        Module module1 = new Module("software engineering 3", "CT417");
+        Module module2 = new Module("machine learning", "CT4101");
         Module[] modules = {module1, module2};
 
         DateTime startDate = new DateTime();
         DateTime endDate = new DateTime();
-        Course course1 = new Course("ECE", modules, startDate, endDate);
+        Course course1 = new Course("ECE", startDate, endDate);
         Course[] courses = {course1};
 
         Student student = new Student("Una Healey", 23, new DateTime(), "1235", modules, courses);
 
-        Course course2 = new Course("IT", modules, startDate, endDate);
+        Course course2 = new Course("IT",  startDate, endDate);
         Course[] newCourse = {course2};
         student.setCourses(newCourse);
 

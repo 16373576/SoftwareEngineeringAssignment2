@@ -4,10 +4,17 @@ public class Module {
     private Student[] students;
     private Course[] courses;
 
-    public Module(String name, String id, Student[] students){
+    public Module(String name, String id, Student[] students, Course[] courses){
         this.name = name;
         this.id = id;
         this.students = students;
+        this.courses = courses;
+    }
+
+    //create constructor without students
+    public Module(String name, String id){
+        this.name = name;
+        this.id = id;
     }
 
     public String getName() {

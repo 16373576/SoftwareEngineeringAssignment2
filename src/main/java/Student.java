@@ -19,6 +19,14 @@ public class Student {
         this.courses = courses;
     }
 
+    // need second constructor with no modules and courses given
+    public Student(String name, int age, DateTime dateOfBirth, String id){
+        this.name = name;
+        this.age = age;
+        this.dob = dateOfBirth;
+        this.id = id;
+    }
+
     public String getUsername(){
         username = this.name + this.age;
         return username;

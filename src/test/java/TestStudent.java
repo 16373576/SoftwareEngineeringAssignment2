@@ -4,11 +4,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestStudent {
-    Module module1= new Module("software engineering 3",  "CT417");
-    Module module2= new Module("machine learning",  "CT4101");
-    Module[] modules = new Module[2];
 
-    @Test(expected = NullPointerException.class)
+    @Test
     public void testGetUsernameIfOnlyFirstNameGiven() {
         Student student = new Student("Bob", 21, new DateTime(), "1234");
         assertEquals("Bob21", student.getUsername());
@@ -33,8 +30,36 @@ public class TestStudent {
     }
 
     @Test
-    public void testGetID() {
+    public void testGetName() {
+        Student student = new Student("Una Healey", age, new DateTime(), "1235");
+    }
 
+    @Test
+    public void testGetAge() {
+        Student student = new Student("Una Healey", age, new DateTime(), "1235");
+    }
+
+    @Test
+    public void testGetDOB() {
+        Student student = new Student("Una Healey", age, new DateTime(), "1235");
+    }
+
+    @Test
+    public void testGetID() {
+        Student student = new Student("Una Healey", age, new DateTime(), "1235");
+    }
+
+    @Test
+    public void testGetModules() {
+        Module module1= new Module("software engineering 3",  "CT417");
+        Module module2= new Module("machine learning",  "CT4101");
+        Module[] modules = new Module[module1, module2];
+        Student student = new Student("Una Healey", age, new DateTime(), "1235");
+    }
+
+    @Test
+    public void testGetCourses() {
+        Student student = new Student("Una Healey", age, new DateTime(), "1235");
     }
 
 }

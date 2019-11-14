@@ -70,7 +70,6 @@ public class TestStudent {
         Student student = new Student("Una Healey", 23, dateOfBirth, "1235");
 
         DateTime newDOB = new DateTime().withTime(5, 20, 0, 0);
-        ;
         student.setDob(newDOB);
         assertNotEquals(dateOfBirth, student.getDob());
         assertEquals(newDOB, student.getDob());
